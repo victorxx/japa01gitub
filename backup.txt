@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-        <meta charset="UTF-8"> <!-- Codificação de caracteres UTF-8 -->
+    <meta charset="UTF-8"> <!-- Codificação de caracteres UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Meta Tags para SEO -->
@@ -32,7 +32,54 @@
     <!-- Título da página -->
     <title>Imagens de Mulheres Japonesas - Beleza e Cultura</title>
 
+    <style>
+        /* Reseta algumas margens e padding padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* O contêiner que envolve as imagens */
+        #ok {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Organiza as imagens em colunas responsivas */
+            gap: 16px; /* Espaçamento entre as imagens */
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        /* Estilo para cada imagem */
+        img {
+            width: 100%;
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s ease; /* Efeito de transição suave */
+        }
+
+        /* Efeito ao passar o mouse sobre a imagem */
+        img:hover {
+            transform: scale(1.05); /* Aumenta ligeiramente a imagem ao passar o mouse */
+        }
+
+        /* Link sem estilo */
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div id="ok"></div>
@@ -48,8 +95,8 @@
             // Criação da imagem
             const img = document.createElement('img');
             img.src = `ok_${i}.jpg`;
-            img.width = 300;
-            img.height = 300;
+            img.alt = `Imagem de mulher japonesa ${i + 1}`; // Texto alternativo para SEO
+            img.loading = "lazy"; // Lazy loading para melhorar a performance
 
             // Tratamento de erro da imagem
             img.onerror = function() {
