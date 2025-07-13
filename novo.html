@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8"> <!-- Codificação de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Explore lindas imagens de mulheres japonesas, capturando sua beleza única e cultura. Descubra o estilo, moda e elegância das mulheres do Japão.">
+    <meta name="keywords" content="imagens de mulheres japonesas, beleza japonesa, mulheres do Japão, estilo japonês, cultura japonesa, fotos de mulheres, moda japonesa">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+    <meta name="robots" content="index, follow"> <!-- Motores de busca podem indexar a página e seguir links -->
+    
+    <!-- Open Graph (OG) para Facebook e Redes Sociais -->
+    <meta property="og:title" content="Imagens de Mulheres Japonesas - Beleza e Estilo">
+    <meta property="og:description" content="Explore uma coleção impressionante de imagens de mulheres japonesas, destacando sua beleza, estilo e tradição cultural.">
+    <meta property="og:image" content="URL_da_imagem_principal_da_página.jpg"> <!-- Imagem que será exibida no compartilhamento -->
+    <meta property="og:url" content="URL_da_sua_página"> <!-- URL da página -->
+    <meta property="og:type" content="website"> <!-- Tipo de conteúdo -->
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Exibe imagem grande ao compartilhar no Twitter -->
+    <meta name="twitter:title" content="Imagens de Mulheres Japonesas - Beleza e Estilo">
+    <meta name="twitter:description" content="Confira imagens de mulheres japonesas que representam o charme, estilo e beleza da cultura japonesa.">
+    <meta name="twitter:image" content="URL_da_imagem_para_twitter.jpg"> <!-- Imagem otimizada para Twitter -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="caminho/para/o/favicon.ico" type="image/x-icon">
+    
+    <!-- Charset e conteúdo da página -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Título da página -->
+    <title>Imagens de Mulheres Japonesas - Beleza e Cultura</title>
+
+
+</head>
+<body>
+    <div id="ok"></div>
+
+    <script>
+        // A partir de 0 até 99, cria os links e imagens
+        for (let i = 0; i < 100; i++) {
+            // Criação do link
+            const link = document.createElement('a');
+            link.href = 'https://victorxx.github.io/piadagithub01/';
+            link.target = '_blank';
+
+            // Criação da imagem
+            const img = document.createElement('img');
+            img.src = `ok_${i}.jpg`;
+            img.width = 300;
+            img.height = 300;
+
+            // Tratamento de erro da imagem
+            img.onerror = function() {
+                img.style.display = 'none'; // Esconde a imagem caso não carregue
+            };
+
+            // Adiciona a imagem ao link e o link ao div#ok
+            link.appendChild(img);
+            document.getElementById('ok').appendChild(link);
+        }
+    </script>
+</body>
+</html>
